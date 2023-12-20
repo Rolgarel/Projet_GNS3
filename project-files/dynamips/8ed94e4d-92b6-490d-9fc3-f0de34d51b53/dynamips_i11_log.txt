@@ -1,0 +1,54 @@
+Dec 19 18:30:41.999 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 19 18:30:42.014 HYPERVISOR: Started on IP = localhost, TCP port = 50261.
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips 
+Dec 19 18:30:42.501 GENERAL: working_dir=C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips\9885443b-c300-411f-b824-56f9668bcc44 
+Dec 19 18:30:42.501 GENERAL: working_dir=C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips\9885443b-c300-411f-b824-56f9668bcc44
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: vm create R21 12 c7200 
+Dec 19 18:30:42.501 VM: VM R21 created.
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: vm set_con_tcp_port R21 5011 
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: c7200 get_mac_addr R21 
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: vm slot_add_binding R21 0 0 C7200-IO-FE 
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: vm set_disk0 R21 0 
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: vm set_exec_area R21 64 
+Dec 19 18:30:42.501 HYPERVISOR: exec_cmd: vm set_ios R21 C:/Users/rapha/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 19 18:30:42.516 HYPERVISOR: exec_cmd: c7200 set_mac_addr R21 ca0c.296c.0000 
+Dec 19 18:30:42.517 HYPERVISOR: exec_cmd: vm set_nvram R21 512 
+Dec 19 18:30:42.517 HYPERVISOR: exec_cmd: vm set_ram R21 512 
+Dec 19 18:30:42.517 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:30:42.517 HYPERVISOR: exec_cmd: vm slot_add_binding R21 1 0 PA-GE 
+Dec 19 18:30:42.517 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:30:42.517 HYPERVISOR: exec_cmd: vm slot_add_binding R21 2 0 PA-GE 
+Dec 19 18:30:42.517 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:30:42.517 HYPERVISOR: exec_cmd: vm slot_add_binding R21 3 0 PA-GE 
+Dec 19 18:30:49.188 HYPERVISOR: exec_cmd: nio create_udp udp-e482b019-bf57-4ae9-bd63-e7bbc9e02988 10068 127.0.0.1 10069 
+Dec 19 18:30:49.455 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R21 1 0 udp-e482b019-bf57-4ae9-bd63-e7bbc9e02988 
+Dec 19 18:30:49.455 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:30:51.322 HYPERVISOR: exec_cmd: nio create_udp udp-9c69f2e1-2842-4ac4-a102-10e721b38e28 10118 127.0.0.1 10119 
+Dec 19 18:30:51.322 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R21 2 0 udp-9c69f2e1-2842-4ac4-a102-10e721b38e28 
+Dec 19 18:30:51.322 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:30:51.432 HYPERVISOR: exec_cmd: nio create_udp udp-942fde56-3236-40ff-b9f9-e734b721aa3f 10124 127.0.0.1 10125 
+Dec 19 18:30:51.432 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R21 3 0 udp-942fde56-3236-40ff-b9f9-e734b721aa3f 
+Dec 19 18:30:51.432 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:31:18.887 HYPERVISOR: exec_cmd: vm set_ghost_status R21 2 
+Dec 19 18:31:18.887 HYPERVISOR: exec_cmd: vm set_ghost_file R21 C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips\c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 19 18:31:18.887 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:31:18.903 HYPERVISOR: exec_cmd: vm set_config R21 configs\i12_startup-config.cfg configs\i12_private-config.cfg 
+Dec 19 18:31:18.903 HYPERVISOR: exec_cmd: vm start R21 
+Dec 19 18:31:54.497 HYPERVISOR: exec_cmd: vm extract_config R21 
+Dec 19 18:32:24.500 HYPERVISOR: exec_cmd: vm extract_config R21 
+Dec 19 18:33:43.616 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:33:43.616 HYPERVISOR: exec_cmd: vm stop R21 
+Dec 19 18:33:43.851 VM: VM R21 shutdown.
+Dec 19 18:33:43.851 HYPERVISOR: exec_cmd: vm extract_config R21 
+Dec 19 18:57:07.529 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:57:07.530 HYPERVISOR: exec_cmd: vm extract_config R21 
+Dec 19 18:57:08.017 HYPERVISOR: exec_cmd: vm get_status R21 
+Dec 19 18:57:08.028 HYPERVISOR: exec_cmd: vm extract_config R21 
+Dec 19 18:57:08.037 HYPERVISOR: exec_cmd: vm delete R21 
+Dec 19 18:57:08.037 VM: VM R21 destroyed.
+Dec 19 18:57:08.041 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 19 18:57:08.451 HYPERVISOR: Stopped.
+Dec 19 18:57:08.451 GENERAL: reset done.
