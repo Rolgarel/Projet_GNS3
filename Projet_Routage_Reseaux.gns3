@@ -847,7 +847,7 @@
                         "port_number": 0
                     }
                 ],
-                "suspend": false
+                "suspend": true
             },
             {
                 "filters": {},
@@ -1033,7 +1033,7 @@
                 "template_id": "aab8c591-aae5-44c9-9d62-4ff936709f6a",
                 "width": 66,
                 "x": -120,
-                "y": -171,
+                "y": -170,
                 "z": 1
             },
             {
@@ -1435,7 +1435,7 @@
                     "slot0": "C7200-IO-FE",
                     "slot1": "PA-GE",
                     "slot2": "PA-GE",
-                    "slot3": null,
+                    "slot3": "PA-GE",
                     "slot4": null,
                     "slot5": null,
                     "slot6": null,
@@ -1504,7 +1504,7 @@
                     "slot0": "C7200-IO-FE",
                     "slot1": "PA-GE",
                     "slot2": "PA-GE",
-                    "slot3": null,
+                    "slot3": "PA-GE",
                     "slot4": null,
                     "slot5": null,
                     "slot6": null,
