@@ -1,0 +1,8 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=FC2E55D3
+eax=FFFFFFFF ebx=00000AD4 ecx=0000E72A edx=FEDB2928 esi=65292000 edi=20127338
+ebp=20127338 esp=FAD4CD6C program=C:\Program Files\GNS3\dynamips\dynamips.EXE, pid 11892, thread unknown (0x1C60)
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+20127338  FC2E55D3 (000124F8, 00000000, 00006000, 00000000)
+End of stack trace
