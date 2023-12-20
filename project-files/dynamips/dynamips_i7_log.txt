@@ -1,0 +1,29 @@
+Dec 20 13:59:56.517 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 20 13:59:56.517 HYPERVISOR: Started on IP = localhost, TCP port = 53592.
+Dec 20 13:59:56.983 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 20 13:59:56.984 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips 
+Dec 20 13:59:56.984 GENERAL: working_dir=C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips
+Dec 20 13:59:56.984 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips\920b6d92-f072-4448-96b5-be4b01c6817b 
+Dec 20 13:59:56.984 GENERAL: working_dir=C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips\920b6d92-f072-4448-96b5-be4b01c6817b
+Dec 20 13:59:56.984 HYPERVISOR: exec_cmd: vm create R17 7 c7200 
+Dec 20 13:59:56.984 VM: VM R17 created.
+Dec 20 13:59:56.984 HYPERVISOR: exec_cmd: vm set_con_tcp_port R17 5006 
+Dec 20 13:59:56.984 HYPERVISOR: exec_cmd: c7200 get_mac_addr R17 
+Dec 20 13:59:56.984 HYPERVISOR: exec_cmd: vm get_status R17 
+Dec 20 13:59:56.984 HYPERVISOR: exec_cmd: vm slot_add_binding R17 0 0 C7200-IO-FE 
+Dec 20 13:59:56.984 HYPERVISOR: exec_cmd: vm set_disk0 R17 0 
+Dec 20 13:59:56.993 HYPERVISOR: exec_cmd: vm set_exec_area R17 64 
+Dec 20 13:59:56.993 HYPERVISOR: exec_cmd: vm set_ios R17 C:/Users/rapha/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 20 13:59:56.993 HYPERVISOR: exec_cmd: c7200 set_mac_addr R17 ca07.0388.0000 
+Dec 20 13:59:56.993 HYPERVISOR: exec_cmd: vm set_nvram R17 512 
+Dec 20 13:59:56.993 HYPERVISOR: exec_cmd: vm set_ram R17 512 
+Dec 20 13:59:56.993 HYPERVISOR: exec_cmd: vm get_status R17 
+Dec 20 13:59:56.993 HYPERVISOR: exec_cmd: vm slot_add_binding R17 1 0 PA-GE 
+Dec 20 13:59:56.993 HYPERVISOR: exec_cmd: vm get_status R17 
+Dec 20 13:59:57.000 HYPERVISOR: exec_cmd: vm slot_add_binding R17 2 0 PA-GE 
+Dec 20 14:00:04.360 HYPERVISOR: exec_cmd: nio create_udp udp-d2e60386-8f12-462c-ba0d-a1348c436b68 10026 127.0.0.1 10027 
+Dec 20 14:00:04.634 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R17 1 0 udp-d2e60386-8f12-462c-ba0d-a1348c436b68 
+Dec 20 14:00:04.634 HYPERVISOR: exec_cmd: vm get_status R17 
+Dec 20 14:00:04.753 HYPERVISOR: exec_cmd: nio create_udp udp-96d67ee1-321f-46fd-9142-2a21a329c90d 10032 127.0.0.1 10033 
+Dec 20 14:00:04.759 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R17 2 0 udp-96d67ee1-321f-46fd-9142-2a21a329c90d 
+Dec 20 14:00:04.760 HYPERVISOR: exec_cmd: vm get_status R17 

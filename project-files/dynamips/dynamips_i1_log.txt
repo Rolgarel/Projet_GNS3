@@ -1,0 +1,34 @@
+Dec 20 13:59:52.712 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 20 13:59:52.715 HYPERVISOR: Started on IP = localhost, TCP port = 53563.
+Dec 20 13:59:53.154 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 20 13:59:53.157 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips 
+Dec 20 13:59:53.162 GENERAL: working_dir=C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips
+Dec 20 13:59:53.162 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips\f720e9da-1b81-48c0-bc2c-a42fce46ee80 
+Dec 20 13:59:53.163 GENERAL: working_dir=C:\Users\rapha\GNS3\projects\Projet_Routage_Reseaux\project-files\dynamips\f720e9da-1b81-48c0-bc2c-a42fce46ee80
+Dec 20 13:59:53.163 HYPERVISOR: exec_cmd: vm create R11 1 c7200 
+Dec 20 13:59:53.166 VM: VM R11 created.
+Dec 20 13:59:53.168 HYPERVISOR: exec_cmd: vm set_con_tcp_port R11 5000 
+Dec 20 13:59:53.169 HYPERVISOR: exec_cmd: c7200 get_mac_addr R11 
+Dec 20 13:59:53.169 HYPERVISOR: exec_cmd: vm get_status R11 
+Dec 20 13:59:53.170 HYPERVISOR: exec_cmd: vm slot_add_binding R11 0 0 C7200-IO-FE 
+Dec 20 13:59:53.172 HYPERVISOR: exec_cmd: vm set_disk0 R11 0 
+Dec 20 13:59:53.173 HYPERVISOR: exec_cmd: vm set_exec_area R11 64 
+Dec 20 13:59:53.175 HYPERVISOR: exec_cmd: vm set_ios R11 C:/Users/rapha/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 20 13:59:53.176 HYPERVISOR: exec_cmd: c7200 set_mac_addr R11 ca01.3ff4.0000 
+Dec 20 13:59:53.178 HYPERVISOR: exec_cmd: vm set_nvram R11 512 
+Dec 20 13:59:53.179 HYPERVISOR: exec_cmd: vm set_ram R11 512 
+Dec 20 13:59:53.180 HYPERVISOR: exec_cmd: vm get_status R11 
+Dec 20 13:59:53.180 HYPERVISOR: exec_cmd: vm slot_add_binding R11 1 0 PA-GE 
+Dec 20 13:59:53.181 HYPERVISOR: exec_cmd: vm get_status R11 
+Dec 20 13:59:53.182 HYPERVISOR: exec_cmd: vm slot_add_binding R11 2 0 PA-GE 
+Dec 20 13:59:53.182 HYPERVISOR: exec_cmd: vm get_status R11 
+Dec 20 13:59:53.183 HYPERVISOR: exec_cmd: vm slot_add_binding R11 3 0 PA-GE 
+Dec 20 14:00:02.132 HYPERVISOR: exec_cmd: nio create_udp udp-33b9ac9c-def1-4920-ba62-26cef0459530 10002 127.0.0.1 10003 
+Dec 20 14:00:02.467 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R11 1 0 udp-33b9ac9c-def1-4920-ba62-26cef0459530 
+Dec 20 14:00:02.467 HYPERVISOR: exec_cmd: vm get_status R11 
+Dec 20 14:00:05.226 HYPERVISOR: exec_cmd: nio create_udp udp-dce22507-aa24-4e96-8a21-c81608fb0a6d 10058 127.0.0.1 10059 
+Dec 20 14:00:05.231 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R11 2 0 udp-dce22507-aa24-4e96-8a21-c81608fb0a6d 
+Dec 20 14:00:05.232 HYPERVISOR: exec_cmd: vm get_status R11 
+Dec 20 14:00:08.240 HYPERVISOR: exec_cmd: nio create_udp udp-6845d54f-630b-45b2-bfdb-ad4216e41397 10122 127.0.0.1 10123 
+Dec 20 14:00:08.240 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R11 3 0 udp-6845d54f-630b-45b2-bfdb-ad4216e41397 
+Dec 20 14:00:08.240 HYPERVISOR: exec_cmd: vm get_status R11 
