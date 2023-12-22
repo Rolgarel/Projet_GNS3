@@ -14,7 +14,7 @@
                 "enable" : "false",
                 "process" : "",
                 "area" : "",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -54,7 +54,7 @@
                     "address" : "2001:200:100:1::2",
                     "AS" : "222",
                     "loopback" : "false"
-                    },
+                    } ]
                 },
             "interface" : [
                 {
@@ -80,7 +80,7 @@
                 "address" : "2001:200:100:1::1/64",
                 "RIP" : "true",
                 "OSPF" : "false"
-                },
+                }]
             },
 		{
             "name" : "R12",
@@ -96,7 +96,7 @@
                 "enable" : "false",
                 "process" : "",
                 "area" : "",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -136,7 +136,7 @@
                     "address" : "2001:200:100:2::2",
                     "AS" : "222",
                     "loopback" : "false"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -162,7 +162,7 @@
                 "address" : "2001:200:100:2::1/64",
                 "RIP" : "true",
                 "OSPF" : "false"
-                },
+                }]
             },
 		{
             "name" : "R13",
@@ -178,7 +178,7 @@
                 "enable" : "false",
                 "process" : "",
                 "area" : "",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -213,7 +213,7 @@
                     "address" : "2001:100:101:77::1",
                     "AS" : "111",
                     "loopback" : "true"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -245,7 +245,7 @@
                 "address" : "2001:100:101:32::3/64",
                 "RIP" : "true",
                 "OSPF" : "false"
-                },
+                }]
             },
 		{
             "name" : "R14",
@@ -261,7 +261,7 @@
                 "enable" : "false",
                 "process" : "",
                 "area" : "",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -296,7 +296,7 @@
                     "address" : "2001:100:101:77::1",
                     "AS" : "111",
                     "loopback" : "true"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -328,7 +328,7 @@
                 "address" : "2001:100:101:41::4/64",
                 "RIP" : "true",
                 "OSPF" : "false"
-                },
+                }]
             },
 		{
             "name" : "R15",
@@ -344,7 +344,7 @@
                 "enable" : "false",
                 "process" : "",
                 "area" : "",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -379,7 +379,7 @@
                     "address" : "2001:100:101:77::1",
                     "AS" : "111",
                     "loopback" : "true"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -405,7 +405,7 @@
                 "address" : "2001:100:101:65::5/64",
                 "RIP" : "true",
                 "OSPF" : "false"
-                },
+                }]
             },
 		{
             "name" : "R16",
@@ -421,7 +421,7 @@
                 "enable" : "false",
                 "process" : "",
                 "area" : "",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -456,7 +456,7 @@
                     "address" : "2001:100:101:77::1",
                     "AS" : "111",
                     "loopback" : "true"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -482,7 +482,7 @@
                 "address" : "2001:100:101:65::6/64",
                 "RIP" : "true",
                 "OSPF" : "false"
-                },
+                }]
             },
 		{
             "name" : "R17",
@@ -498,7 +498,7 @@
                 "enable" : "false",
                 "process" : "",
                 "area" : "",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -533,7 +533,7 @@
                     "address" : "2001:100:101:66::1",
                     "AS" : "111",
                     "loopback" : "true"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -559,7 +559,7 @@
                 "address" : "2001:100:101:1::1/64",
                 "RIP" : "true",
                 "OSPF" : "false"
-                },
+                }]
             },
 		{
             "name" : "R21",
@@ -575,7 +575,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "GigabitEthernet 3/0",
+                "passive" : "GigabitEthernet 3/0"
                 },
             "BGP" :
                 {
@@ -615,7 +615,7 @@
                     "address" : "2001:200:100:1::1",
                     "AS" : "111",
                     "loopback" : "false"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -641,7 +641,7 @@
                 "address" : "2001:200:100:1::2/64",
                 "RIP" : "false",
                 "OSPF" : "true"
-                },
+                }]
             },
 		{
             "name" : "R22",
@@ -657,7 +657,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "GigabitEthernet 3/0",
+                "passive" : "GigabitEthernet 3/0"
                 },
             "BGP" :
                 {
@@ -697,7 +697,7 @@
                     "address" : "2001:200:100:2::1",
                     "AS" : "111",
                     "loopback" : "false"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -723,7 +723,7 @@
                 "address" : "2001:200:100:2::2/64",
                 "RIP" : "false",
                 "OSPF" : "true"
-                },
+                }]
             },
 		{
             "name" : "R23",
@@ -739,7 +739,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -774,7 +774,7 @@
                     "address" : "2001:100:102:66::1",
                     "AS" : "222",
                     "loopback" : "true"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -806,7 +806,7 @@
                 "address" : "2001:100:102:32::3/64",
                 "RIP" : "false",
                 "OSPF" : "true"
-                },
+                }]
             },
 		{
             "name" : "R24",
@@ -822,7 +822,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -857,7 +857,7 @@
                     "address" : "2001:100:102:66::1",
                     "AS" : "222",
                     "loopback" : "true"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -889,7 +889,7 @@
                 "address" : "2001:100:102:41::4/64",
                 "RIP" : "false",
                 "OSPF" : "true"
-                },
+                }]
             },
 		{
             "name" : "R25",
@@ -905,7 +905,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -940,7 +940,7 @@
                     "address" : "2001:100:102:66::1",
                     "AS" : "222",
                     "loopback" : "true"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -966,7 +966,7 @@
                 "address" : "2001:100:102:65::5/64",
                 "RIP" : "false",
                 "OSPF" : "true"
-                },
+                }]
             },
 		{
             "name" : "R26",
@@ -982,7 +982,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -1017,7 +1017,7 @@
                     "address" : "2001:100:102:55::1",
                     "AS" : "222",
                     "loopback" : "true"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -1043,7 +1043,7 @@
                 "address" : "2001:100:102:65::6/64",
                 "RIP" : "false",
                 "OSPF" : "true"
-                },
+                }]
             },
 		{
             "name" : "R27",
@@ -1059,7 +1059,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "",
+                "passive" : ""
                 },
             "BGP" :
                 {
@@ -1094,7 +1094,7 @@
                     "address" : "2001:100:102:55::1",
                     "AS" : "222",
                     "loopback" : "true"
-                    },
+                    }]
                 },
             "interface" : [
                 {
@@ -1120,7 +1120,7 @@
                 "address" : "2001:100:102:1::1/64",
                 "RIP" : "false",
                 "OSPF" : "true"
-                },
-            },
+                }]
+            }]
 }
       
