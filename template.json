@@ -25,7 +25,36 @@
                     "AS" : "111",
                     "loopback" : "true"
                     },
-                 ...],
+					{
+                    "address" : "2001:100:101:33::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:44::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:55::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:66::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:77::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:200:100:1::2",
+                    "AS" : "222",
+                    "loopback" : "false"
+                    },
                 },
             "interface" : [
                 {
@@ -34,8 +63,1064 @@
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
-                ...],
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:101:31::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:101:41::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:200:100:1::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
             },
-    ...],
+		{
+            "name" : "R12",
+            "AS" : "111",
+            "id" : "1.1.1.12",
+            "RIP" :
+                {
+                    "enable" : "true",
+                    "process" : "mrip"
+                },
+            "OSPF" :
+                {
+                "enable" : "false",
+                "process" : "",
+                "area" : "",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:101:11::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:33::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:44::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:55::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:66::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:77::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:200:100:2::2",
+                    "AS" : "222",
+                    "loopback" : "false"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:101:22::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:101:42::2/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:101:32::2/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:200:100:2::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+            },
+		{
+            "name" : "R13",
+            "AS" : "111",
+            "id" : "1.1.1.13",
+            "RIP" :
+                {
+                    "enable" : "true",
+                    "process" : "mrip"
+                },
+            "OSPF" :
+                {
+                "enable" : "false",
+                "process" : "",
+                "area" : "",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:101:11::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:22::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:44::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:55::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:66::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:77::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:101:33::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:101:31::3/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:101:53::3/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:100:101:43::3/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 4/0",
+                "address" : "2001:100:101:32::3/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+            },
+		{
+            "name" : "R14",
+            "AS" : "111",
+            "id" : "1.1.1.14",
+            "RIP" :
+                {
+                    "enable" : "true",
+                    "process" : "mrip"
+                },
+            "OSPF" :
+                {
+                "enable" : "false",
+                "process" : "",
+                "area" : "",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:101:11::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:22::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:33::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:55::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:66::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:77::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:101:44::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:101:42::4/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:101:64::4/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:100:101:43::4/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 4/0",
+                "address" : "2001:100:101:41::4/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+            },
+		{
+            "name" : "R15",
+            "AS" : "111",
+            "id" : "1.1.1.15",
+            "RIP" :
+                {
+                    "enable" : "true",
+                    "process" : "mrip"
+                },
+            "OSPF" :
+                {
+                "enable" : "false",
+                "process" : "",
+                "area" : "",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:101:11::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:22::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:33::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:44::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:66::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:77::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:101:55::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:101:75::5/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:101:53::5/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:100:101:65::5/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+            },
+		{
+            "name" : "R16",
+            "AS" : "111",
+            "id" : "1.1.1.16",
+            "RIP" :
+                {
+                    "enable" : "true",
+                    "process" : "mrip"
+                },
+            "OSPF" :
+                {
+                "enable" : "false",
+                "process" : "",
+                "area" : "",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:101:11::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:22::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:33::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:44::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:55::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:77::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:101:66::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:101:76::6/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:101:64::6/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:100:101:65::6/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+            },
+		{
+            "name" : "R17",
+            "AS" : "111",
+            "id" : "1.1.1.17",
+            "RIP" :
+                {
+                    "enable" : "true",
+                    "process" : "mrip"
+                },
+            "OSPF" :
+                {
+                "enable" : "false",
+                "process" : "",
+                "area" : "",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:101:11::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:22::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:33::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:44::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:55::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:101:66::1",
+                    "AS" : "111",
+                    "loopback" : "true"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:101:77::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:101:75::7/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:101:76::7/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:100:101:1::1/64",
+                "RIP" : "true",
+                "OSPF" : "false"
+                },
+            },
+		{
+            "name" : "R21",
+            "AS" : "222",
+            "id" : "2.2.2.21",
+            "RIP" :
+                {
+                    "enable" : "false",
+                    "process" : ""
+                },
+            "OSPF" :
+                {
+                "enable" : "true",
+                "process" : "13",
+                "area" : "0",
+                "passive" : "GigabitEthernet 3/0",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:102:77::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:22::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:33::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:44::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:55::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:66::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:200:100:1::1",
+                    "AS" : "111",
+                    "loopback" : "false"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:102:11::1/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:102:31::1/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:102:41::1/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:200:100:1::2/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+            },
+		{
+            "name" : "R22",
+            "AS" : "222",
+            "id" : "2.2.2.22",
+            "RIP" :
+                {
+                    "enable" : "false",
+                    "process" : ""
+                },
+            "OSPF" :
+                {
+                "enable" : "true",
+                "process" : "13",
+                "area" : "0",
+                "passive" : "GigabitEthernet 3/0",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:102:77::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:11::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:33::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:44::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:55::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:66::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:200:100:2::1",
+                    "AS" : "111",
+                    "loopback" : "false"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:102:22::1/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:102:42::2/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:102:32::2/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:200:100:2::2/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+            },
+		{
+            "name" : "R23",
+            "AS" : "222",
+            "id" : "2.2.2.23",
+            "RIP" :
+                {
+                    "enable" : "false",
+                    "process" : ""
+                },
+            "OSPF" :
+                {
+                "enable" : "true",
+                "process" : "13",
+                "area" : "0",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:102:77::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:11::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:22::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:44::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:55::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:66::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:102:33::1/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:102:31::3/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:102:53::3/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:100:102:43::3/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 4/0",
+                "address" : "2001:100:102:32::3/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+            },
+		{
+            "name" : "R24",
+            "AS" : "222",
+            "id" : "2.2.2.24",
+            "RIP" :
+                {
+                    "enable" : "false",
+                    "process" : ""
+                },
+            "OSPF" :
+                {
+                "enable" : "true",
+                "process" : "13",
+                "area" : "0",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:102:77::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:11::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:22::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:33::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:55::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:66::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:102:44::1/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:102:42::4/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:102:64::4/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:100:102:43::4/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 4/0",
+                "address" : "2001:100:102:41::4/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+            },
+		{
+            "name" : "R25",
+            "AS" : "222",
+            "id" : "2.2.2.25",
+            "RIP" :
+                {
+                    "enable" : "false",
+                    "process" : ""
+                },
+            "OSPF" :
+                {
+                "enable" : "true",
+                "process" : "13",
+                "area" : "0",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:102:77::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:11::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:22::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:33::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:44::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:66::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:102:55::1/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:102:53::5/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:102:75::5/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:100:102:65::5/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+            },
+		{
+            "name" : "R26",
+            "AS" : "222",
+            "id" : "2.2.2.26",
+            "RIP" :
+                {
+                    "enable" : "false",
+                    "process" : ""
+                },
+            "OSPF" :
+                {
+                "enable" : "true",
+                "process" : "13",
+                "area" : "0",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:102:77::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:11::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:22::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:33::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:44::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:55::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:102:66::1/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:102:64::6/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:102:76::6/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:100:102:65::6/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+            },
+		{
+            "name" : "R27",
+            "AS" : "222",
+            "id" : "2.2.2.27",
+            "RIP" :
+                {
+                    "enable" : "false",
+                    "process" : ""
+                },
+            "OSPF" :
+                {
+                "enable" : "true",
+                "process" : "13",
+                "area" : "0",
+                "passive" : "",
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "address" : "2001:100:102:66::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:11::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:22::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:33::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:44::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+					{
+                    "address" : "2001:100:102:55::1",
+                    "AS" : "222",
+                    "loopback" : "true"
+                    },
+                },
+            "interface" : [
+                {
+                "name" : "loopback0",
+                "address" : "2001:100:102:77::1/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 1/0",
+                "address" : "2001:100:102:75::7/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 2/0",
+                "address" : "2001:100:102:76::7/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+				{
+                "name" : "GigabitEthernet 3/0",
+                "address" : "2001:100:102:1::1/64",
+                "RIP" : "false",
+                "OSPF" : "true"
+                },
+            },
 }
       
