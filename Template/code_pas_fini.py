@@ -1,20 +1,8 @@
 import json
 
 # ouverture du json
-file = open('template.json', "r")
+file = open('routeurs.json', "r")
 data = json.loads(file.read())
-
-s = ""
-for i in data["Router"]:
-    s = s + i['name'] + "*\n"
-
-with open('res.txt', "w") as f :
-    f.write(s) #f.write(s)
-    f.close()
-
-
-# fermeture du json
-file.close()
 
 
 def interface(inter):
@@ -64,3 +52,53 @@ def lot_of_pt_ex(nb):
     for i in range (nb):
         res = res + "!\n"
     return res
+
+def neighbors(data):
+    res = ""
+    res = res + "router bgp " + data["AS"] + "\n"
+    res = res + " bgp router-id " + data["id"] + "\n"
+    res = res + " bgp log-neighbor-changes\n"
+    res = res + " no bgp default ipv4-unicast\n"
+    for i in data["BGP"]["neighbors"] :
+        res = res + " neighbor " + i["address"] + " remote-as " + i["AS"] + "\n"
+        if i["loopback"] == "true" :
+            res = res + " neighbor " + i["address"] + " update-source Loopback0\n"
+    return res
+
+def entracte():
+    res = ""
+    res = res + " !\n"
+    res = res + " address-family ipv4\n"
+    res = res + " exit-address-family\n"
+    res = res + " !\n"
+    return res
+
+def activate(data):
+    res = ""
+    res = res + " address-family ipv4\n"
+    for i in data["interface"]:
+        if i["name"] == "Loopback0":
+            res = res + "  network " + i["address"] + "\n"
+        if i["address"] == "2001:100:102:1::1/64" or i["address"] == "2001:100:101:1::1/64" :
+            res = res + "  network " + i["address"] + "\n"
+    for j in data["BGP"]["neighbors"]:
+        res = res + "  neighbor " + j["address"] + " activate\n"
+    res = res + " exit-address-family\n"
+    res = res + "!\n"
+    return res
+
+def bgp(data):
+    res = neighbors(data) + entracte() + activate(data)
+    return res
+
+s = ""
+for i in data["Router"]:
+    s = introduction(i) + bgp(i)
+
+with open('res.txt', "w") as f :
+    f.write(s) #f.write(s)
+    f.close()
+
+
+# fermeture du json
+file.close()
