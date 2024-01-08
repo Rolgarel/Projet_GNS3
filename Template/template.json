@@ -4,6 +4,8 @@
             "name" : "R11",
             "AS" : "111",
             "id" : "1.1.1.11",
+            "PATH" : "",
+            "file" : "",
             "RIP" :
                 {
                     "enable" : "true",

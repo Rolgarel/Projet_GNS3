@@ -2,6 +2,8 @@
     "Router" : [
         {
             "name" : "R11",
+            "PATH" : "../project-files/dynamips/f720e9da-1b81-48c0-bc2c-a42fce46ee80/configs/",
+            "file" : "i1_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.11",
             "RIP" :
@@ -84,6 +86,8 @@
             },
 		{
             "name" : "R12",
+            "PATH" : "../project-files/dynamips/bb5bce07-b53c-4544-a1a4-232c199544b4/configs/",
+            "file" : "i2_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.12",
             "RIP" :
@@ -166,6 +170,8 @@
             },
 		{
             "name" : "R13",
+            "PATH" : "../project-files/dynamips/28cc91c9-3dda-4357-ab61-385b7021b099/configs/",
+            "file" : "i3_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.13",
             "RIP" :
@@ -249,6 +255,8 @@
             },
 		{
             "name" : "R14",
+            "PATH" : "../project-files/dynamips/3dc7928f-7914-4fc3-9f51-b8bc8e5c7b7f/configs/",
+            "file" : "i4_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.14",
             "RIP" :
@@ -332,6 +340,8 @@
             },
 		{
             "name" : "R15",
+            "PATH" : "../project-files/dynamips/fdb91b40-459c-4c29-89a5-4594d44e0a95/configs/",
+            "file" : "i5_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.15",
             "RIP" :
@@ -409,6 +419,8 @@
             },
 		{
             "name" : "R16",
+            "PATH" : "../project-files/dynamips/85e92112-38c2-4cbb-bda5-f8d2bbd40293/configs/",
+            "file" : "i6_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.16",
             "RIP" :
@@ -486,6 +498,8 @@
             },
 		{
             "name" : "R17",
+            "PATH" : "../project-files/dynamips/920b6d92-f072-4448-96b5-be4b01c6817b/configs/",
+            "file" : "i7_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.17",
             "RIP" :
@@ -563,6 +577,8 @@
             },
 		{
             "name" : "R21",
+            "PATH" : "../project-files/dynamips/9885443b-c300-411f-b824-56f9668bcc44/configs/",
+            "file" : "i12_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.21",
             "RIP" :
@@ -645,6 +661,8 @@
             },
 		{
             "name" : "R22",
+            "PATH" : "../project-files/dynamips/59a4c443-a3e3-45b8-ab87-10bd3732b2fd/configs/",
+            "file" : "i8_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.22",
             "RIP" :
@@ -727,6 +745,8 @@
             },
 		{
             "name" : "R23",
+            "PATH" : "../project-files/dynamips/eac171bb-3a38-493c-9808-91c637a1dd71/configs/",
+            "file" : "i13_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.23",
             "RIP" :
@@ -810,6 +830,8 @@
             },
 		{
             "name" : "R24",
+            "PATH" : "../project-files/dynamips/8ed94e4d-92b6-490d-9fc3-f0de34d51b53/configs/",
+            "file" : "i11_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.24",
             "RIP" :
@@ -893,6 +915,8 @@
             },
 		{
             "name" : "R25",
+            "PATH" : "../project-files/dynamips/39f7631a-d0a8-4567-a1c8-bbade4e591d1/configs/",
+            "file" : "i14_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.25",
             "RIP" :
@@ -970,6 +994,8 @@
             },
 		{
             "name" : "R26",
+            "PATH" : "../project-files/dynamips/c4253db9-f662-4279-9f59-484b8199c535/configs/",
+            "file" : "i10_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.26",
             "RIP" :
@@ -1047,6 +1073,8 @@
             },
 		{
             "name" : "R27",
+            "PATH" : "../project-files/dynamips/8d5500da-417b-43ce-82e2-39ee6c9fbb16/configs/",
+            "file" : "i9_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.27",
             "RIP" :
