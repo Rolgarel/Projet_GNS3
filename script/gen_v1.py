@@ -4,20 +4,22 @@ import json
 def lot_of_pt_ex(nb):
     res = ""
     for i in range(nb):
-        res = res + "!\n"
+        res = res + "! \n"
     return res
 
 
 def introduction(data):
-    t = lot_of_pt_ex(7)
+    t = lot_of_pt_ex(4)
+    t = t + " \n"
+    t = t + "! \n"
     t = t + "! Last configuration change at 00:00:00 UTC Mon Jan 01 2024\n"
-    t = t + "!\n"
+    t = t + "! \n"
     t = t + "version 15.2\n"
     t = t + "service timestamps debug datetime msec\n"
     t = t + "service timestamps log datetime msec\n"
-    t = t + "!\n"
+    t = t + "! \n"
     t = t + "hostname " + data["name"] + "\n"
-    t = t + "!\n"
+    t = t + "! \n"
     t = t + "boot-start-marker\n"
     t = t + "boot-end-marker\n"
     t = t + lot_of_pt_ex(3)
@@ -69,7 +71,7 @@ def activate(data):
     for j in data["BGP"]["neighbors"]:
         res = res + "  neighbor " + j["address"] + " activate\n"
     res = res + " exit-address-family\n"
-    res = res + "!\n"
+    res = res + "! \n"
     return res
 
 
@@ -89,7 +91,7 @@ def interface(inter):
         s = s + " ipv6 rip mrip enable\n"
     elif inter['OSPF'] == "true":
         s = s + " ipv6 ospf 13 area 0\n"
-    s = s + "!\n"
+    s = s + "! \n"
     return s
 
 
@@ -98,7 +100,7 @@ def fast():
     s = s + " no ip address\n"
     s = s + " shutdown\n"
     s = s + " duplex full\n"
-    s = s + "!\n"
+    s = s + "! \n"
     return s
 
 
@@ -134,13 +136,13 @@ def proto(routeur):
     if routeur['RIP']['enable'] == "true":
         s = s + "ipv6 router rip mrip\n"
         s = s + " redistribute connected\n"
-        s = s + "!\n"
+        s = s + "! \n"
     elif routeur['OSPF']['enable'] == "true":
         s = s + "ipv6 router ospf 13\n"
         s = s + " router-id " + routeur['id'] + "\n"
         if routeur['OSPF']['passive'] != "":
             s = s + " passive-interface " + routeur['OSPF']['passive'] + "\n"
-        s = s + "!\n"
+        s = s + "! \n"
     return s
 
 

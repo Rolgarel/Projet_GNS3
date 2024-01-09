@@ -66,19 +66,19 @@
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:101:31::1/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:101:41::1/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:200:100:1::1/64",
                 "RIP" : "true",
                 "OSPF" : "false"
@@ -150,19 +150,19 @@
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:101:42::2/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:101:32::2/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:200:100:2::1/64",
                 "RIP" : "true",
                 "OSPF" : "false"
@@ -229,25 +229,25 @@
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:101:31::3/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:101:53::3/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:100:101:43::3/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 4/0",
+                "name" : "GigabitEthernet4/0",
                 "address" : "2001:100:101:32::3/64",
                 "RIP" : "true",
                 "OSPF" : "false"
@@ -314,25 +314,25 @@
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:101:42::4/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:101:64::4/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:100:101:43::4/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 4/0",
+                "name" : "GigabitEthernet4/0",
                 "address" : "2001:100:101:41::4/64",
                 "RIP" : "true",
                 "OSPF" : "false"
@@ -399,19 +399,19 @@
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:101:75::5/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:101:53::5/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:100:101:65::5/64",
                 "RIP" : "true",
                 "OSPF" : "false"
@@ -478,19 +478,19 @@
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:101:76::6/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:101:64::6/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:100:101:65::6/64",
                 "RIP" : "true",
                 "OSPF" : "false"
@@ -557,19 +557,19 @@
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:101:75::7/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:101:76::7/64",
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:100:101:1::1/64",
                 "RIP" : "true",
                 "OSPF" : "false"
@@ -591,7 +591,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "GigabitEthernet 3/0"
+                "passive" : "GigabitEthernet3/0"
                 },
             "BGP" :
                 {
@@ -641,19 +641,19 @@
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:102:31::1/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:102:41::1/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:200:100:1::2/64",
                 "RIP" : "false",
                 "OSPF" : "true"
@@ -675,7 +675,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "GigabitEthernet 3/0"
+                "passive" : "GigabitEthernet3/0"
                 },
             "BGP" :
                 {
@@ -725,19 +725,19 @@
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:102:42::2/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:102:32::2/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:200:100:2::2/64",
                 "RIP" : "false",
                 "OSPF" : "true"
@@ -804,25 +804,25 @@
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:102:31::3/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:102:53::3/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:100:102:43::3/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 4/0",
+                "name" : "GigabitEthernet4/0",
                 "address" : "2001:100:102:32::3/64",
                 "RIP" : "false",
                 "OSPF" : "true"
@@ -889,25 +889,25 @@
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:102:42::4/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:102:64::4/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:100:102:43::4/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 4/0",
+                "name" : "GigabitEthernet4/0",
                 "address" : "2001:100:102:41::4/64",
                 "RIP" : "false",
                 "OSPF" : "true"
@@ -974,19 +974,19 @@
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:102:53::5/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:102:75::5/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:100:102:65::5/64",
                 "RIP" : "false",
                 "OSPF" : "true"
@@ -1053,19 +1053,19 @@
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:102:64::6/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:102:76::6/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:100:102:65::6/64",
                 "RIP" : "false",
                 "OSPF" : "true"
@@ -1132,19 +1132,19 @@
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 1/0",
+                "name" : "GigabitEthernet1/0",
                 "address" : "2001:100:102:75::7/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 2/0",
+                "name" : "GigabitEthernet2/0",
                 "address" : "2001:100:102:76::7/64",
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
 				{
-                "name" : "GigabitEthernet 3/0",
+                "name" : "GigabitEthernet3/0",
                 "address" : "2001:100:102:1::1/64",
                 "RIP" : "false",
                 "OSPF" : "true"
