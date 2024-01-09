@@ -62,12 +62,14 @@ def entracte():
 
 def activate(data):
     res = ""
-    res = res + " address-family ipv4\n"
+    res = res + " address-family ipv6\n"
     for i in data["interface"]:
         if i["name"] == "Loopback0":
-            res = res + "  network " + i["address"] + "\n"
-        if i["address"] == "2001:100:102:1::1/64" or i["address"] == "2001:100:101:1::1/64":
-            res = res + "  network " + i["address"] + "\n"
+            res = res + "  network " + i["address"][:-4] + "/64\n"
+        if i["address"] == "2001:100:101:1::1/64":
+            res = res + "  network 2001:100:101:1::/64\n"
+        if i["address"] == "2001:100:102:1::1/64":
+            res = res + "  network 2001:100:102:1::/64\n"
     for j in data["BGP"]["neighbors"]:
         res = res + "  neighbor " + j["address"] + " activate\n"
     res = res + " exit-address-family\n"
@@ -84,7 +86,8 @@ def interface(inter):
     s = ""
     s = s + "interface " + inter['name'] + "\n"
     s = s + " no ip address\n"
-    s = s + " negotiation auto\n"
+    if inter["name"] != "Loopback0":
+        s = s + " negotiation auto\n"
     s = s + " ipv6 enable\n"
     s = s + " ipv6 address " + inter['address'] + "\n"
     if inter['RIP'] == "true":
