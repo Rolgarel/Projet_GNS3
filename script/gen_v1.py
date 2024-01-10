@@ -18,7 +18,7 @@ def introduction(data):
     t = t + "service timestamps debug datetime msec\n"
     t = t + "service timestamps log datetime msec\n"
     t = t + "! \n"
-    t = t + "hostname " + data["name"] + "\n"
+    t = t + "hostname R" + str(data["name"]) + "\n"
     t = t + "! \n"
     t = t + "boot-start-marker\n"
     t = t + "boot-end-marker\n"
@@ -38,16 +38,16 @@ def introduction(data):
     return t
 
 
-def neighbors(data):
+def neighbors(data, prefixe):
     res = ""
     res = res + "router bgp " + data["AS"] + "\n"
     res = res + " bgp router-id " + data["id"] + "\n"
     res = res + " bgp log-neighbor-changes\n"
     res = res + " no bgp default ipv4-unicast\n"
     for i in data["BGP"]["neighbors"]:
-        res = res + " neighbor " + i["address"] + " remote-as " + i["AS"] + "\n"
+        res = res + " neighbor " + addressage_neigh(prefixe, i) + " remote-as " + i["AS"] + "\n"
         if i["loopback"] == "true":
-            res = res + " neighbor " + i["address"] + " update-source Loopback0\n"
+            res = res + " neighbor " + addressage_neigh(prefixe, i) + " update-source Loopback0\n"
     return res
 
 
@@ -60,36 +60,33 @@ def entracte():
     return res
 
 
-def activate(data):
+def activate(data, prefixe):
     res = ""
     res = res + " address-family ipv6\n"
     for i in data["interface"]:
-        if i["name"] == "Loopback0":
-            res = res + "  network " + i["address"][:-4] + "/64\n"
-        if i["address"] == "2001:100:101:1::1/64":
-            res = res + "  network 2001:100:101:1::/64\n"
-        if i["address"] == "2001:100:102:1::1/64":
-            res = res + "  network 2001:100:102:1::/64\n"
+        res = res + "  network " + addressage_int(i, data, prefixe)[:-4] + "/64\n"   
     for j in data["BGP"]["neighbors"]:
-        res = res + "  neighbor " + j["address"] + " activate\n"
+        res = res + "  neighbor " + addressage_neigh(prefixe, j) + " activate\n"
+    
+    
     res = res + " exit-address-family\n"
     res = res + "! \n"
     return res
 
 
-def bgp(data):
-    res = neighbors(data) + entracte() + activate(data)
+def bgp(data, prefixe):
+    res = neighbors(data, prefixe) + entracte() + activate(data, prefixe)
     return res
 
 
-def interface(inter):
+def interface(inter, routeur, prefixe):
     s = ""
     s = s + "interface " + inter['name'] + "\n"
     s = s + " no ip address\n"
     if inter["name"] != "Loopback0":
         s = s + " negotiation auto\n"
     s = s + " ipv6 enable\n"
-    s = s + " ipv6 address " + inter['address'] + "\n"
+    s = s + " ipv6 address " + addressage_int(inter, routeur, prefixe) + "\n"
     if inter['RIP'] == "true":
         s = s + " ipv6 rip mrip enable\n"
     elif inter['OSPF'] == "true":
@@ -107,10 +104,10 @@ def fast():
     return s
 
 
-def interfaces(inters):
+def interfaces(inters, routeur, prefixe):
     s = ""
     for i in inters:
-        s = s + interface(i)
+        s = s + interface(i, routeur, prefixe)
         if i['name'] == "Loopback0":
             s = s + fast()
     return s
@@ -158,6 +155,31 @@ def tail(routeur):
     s = s + end()
     return s
 
+def addressage_int(interface, routeur, prefixe):
+    if interface["voisin"] < 0:
+        addresse = prefixe["intra"] + str(abs(interface["voisin"]))+":1::" + prefixe["mask"]
+        
+    elif interface["voisin"] == 0:
+        addresse = prefixe["intra"] + str(int(routeur['name'] / 10)) + ":" + str((routeur["name"]%10) * 11) + "::1" + prefixe["mask"]
+        
+    else :
+        if int(routeur["name"] / 10) != int(interface["voisin"]/10): #pas dans meme AS
+            addresse = prefixe["extra"] + str(routeur["name"]%10) + "::" + str(int(routeur["name"]/10)) + prefixe["mask"]
+    
+        else : #meme AS
+            addresse = prefixe["intra"] + str(int(routeur["name"] / 10)) + ":" + str(max(routeur["name"]%10, interface["voisin"]%10)) + str(min(routeur["name"]%10, interface["voisin"]%10)) + "::" + str(routeur["name"]%10)
+    return addresse
+
+def addressage_neigh(prefixe, neighbor):
+    if neighbor["loopback"] == "true":
+        res = prefixe["intra"] + str(int(neighbor['voisin']/10)) + "::1"
+    else :
+        res = prefixe["extra"] + str(int(neighbor['voisin']%10)) + "::" + str(int(neighbor['voisin']/10))
+    return res
+
+def adressage_reseau(prefixe, addresse):
+    res = addresse[:-3] + prefixe['mask']
+    return res
 
 # début
 
@@ -167,7 +189,7 @@ data = json.loads(file.read())
 
 s = ""
 for i in data['Router']:
-    s = introduction(i) + interfaces(i['interface']) + bgp(i) + tail(i)
+    s = introduction(i) + interfaces(i['interface'], i, data['Prefixes']) + bgp(i, data['Prefixes']) + tail(i)
     # print(s)
     # print(i['name'] + '.cdf')
     with open(i['PATH'] + i['file'], "w") as f:
