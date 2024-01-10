@@ -1,0 +1,34 @@
+Jan 09 14:20:46.475 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Jan 09 14:20:46.475 HYPERVISOR: Started on IP = localhost, TCP port = 51722.
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: hypervisor working_dir D:\rapha\Documents\GitHub\Projet_GNS3\project-files\dynamips 
+Jan 09 14:20:46.952 GENERAL: working_dir=D:\rapha\Documents\GitHub\Projet_GNS3\project-files\dynamips
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: hypervisor working_dir D:\rapha\Documents\GitHub\Projet_GNS3\project-files\dynamips\920b6d92-f072-4448-96b5-be4b01c6817b 
+Jan 09 14:20:46.952 GENERAL: working_dir=D:\rapha\Documents\GitHub\Projet_GNS3\project-files\dynamips\920b6d92-f072-4448-96b5-be4b01c6817b
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: vm create R17 7 c7200 
+Jan 09 14:20:46.952 VM: VM R17 created.
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: vm set_con_tcp_port R17 5006 
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: c7200 get_mac_addr R17 
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: vm get_status R17 
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: vm slot_add_binding R17 0 0 C7200-IO-FE 
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: vm set_disk0 R17 0 
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: vm set_exec_area R17 64 
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: vm set_ios R17 C:/Users/rapha/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 09 14:20:46.952 HYPERVISOR: exec_cmd: c7200 set_mac_addr R17 ca07.0388.0000 
+Jan 09 14:20:46.967 HYPERVISOR: exec_cmd: vm set_nvram R17 512 
+Jan 09 14:20:46.967 HYPERVISOR: exec_cmd: vm set_ram R17 512 
+Jan 09 14:20:46.967 HYPERVISOR: exec_cmd: vm get_status R17 
+Jan 09 14:20:46.967 HYPERVISOR: exec_cmd: vm slot_add_binding R17 1 0 PA-GE 
+Jan 09 14:20:46.967 HYPERVISOR: exec_cmd: vm get_status R17 
+Jan 09 14:20:46.967 HYPERVISOR: exec_cmd: vm slot_add_binding R17 2 0 PA-GE 
+Jan 09 14:20:46.967 HYPERVISOR: exec_cmd: vm get_status R17 
+Jan 09 14:20:46.967 HYPERVISOR: exec_cmd: vm slot_add_binding R17 3 0 PA-GE 
+Jan 09 14:20:54.871 HYPERVISOR: exec_cmd: nio create_udp udp-9677a157-e47e-44d3-83b7-bfcd41eb7d67 10026 127.0.0.1 10027 
+Jan 09 14:20:55.154 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R17 1 0 udp-9677a157-e47e-44d3-83b7-bfcd41eb7d67 
+Jan 09 14:20:55.154 HYPERVISOR: exec_cmd: vm get_status R17 
+Jan 09 14:20:55.279 HYPERVISOR: exec_cmd: nio create_udp udp-f567bfdf-c88e-480d-a736-1fb25ebf79d0 10032 127.0.0.1 10033 
+Jan 09 14:20:55.279 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R17 2 0 udp-f567bfdf-c88e-480d-a736-1fb25ebf79d0 
+Jan 09 14:20:55.279 HYPERVISOR: exec_cmd: vm get_status R17 
+Jan 09 14:20:59.688 HYPERVISOR: exec_cmd: nio create_udp udp-d972d18b-6945-4884-8a27-a32c3c0e344d 10138 127.0.0.1 10139 
+Jan 09 14:20:59.688 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R17 3 0 udp-d972d18b-6945-4884-8a27-a32c3c0e344d 
+Jan 09 14:20:59.688 HYPERVISOR: exec_cmd: vm get_status R17 
