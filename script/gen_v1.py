@@ -167,12 +167,12 @@ def addressage_int(interface, routeur, prefixe):
             addresse = prefixe["extra"] + str(routeur["name"]%10) + "::" + str(int(routeur["name"]/10)) + prefixe["mask"]
     
         else : #meme AS
-            addresse = prefixe["intra"] + str(int(routeur["name"] / 10)) + ":" + str(max(routeur["name"]%10, interface["voisin"]%10)) + str(min(routeur["name"]%10, interface["voisin"]%10)) + "::" + str(routeur["name"]%10)
+            addresse = prefixe["intra"] + str(int(routeur["name"] / 10)) + ":" + str(max(routeur["name"]%10, interface["voisin"]%10)) + str(min(routeur["name"]%10, interface["voisin"]%10)) + "::" + str(routeur["name"]%10) + prefixe["mask"]
     return addresse
 
 def addressage_neigh(prefixe, neighbor):
     if neighbor["loopback"] == "true":
-        res = prefixe["intra"] + str(int(neighbor['voisin']/10)) + "::1"
+        res = prefixe["intra"] + str(int(neighbor['voisin']/10)) + ":" + str(int(neighbor['voisin']%10)*11) + "::1"
     else :
         res = prefixe["extra"] + str(int(neighbor['voisin']%10)) + "::" + str(int(neighbor['voisin']/10))
     return res
@@ -198,3 +198,4 @@ for i in data['Router']:
 
 # fermeture du json
 file.close()
+
