@@ -8,7 +8,7 @@
 	"Router" : [
         {
             "name" : 11,
-            "PATH" : "../project-files/dynamips/f720e9da-1b81-48c0-bc2c-a42fce46ee80/configs/",
+            "PATH" : "../project-files/dynamips/8dd5ddbf-edee-4375-ac7d-e5926fb788bc/configs/",
             "file" : "i1_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.11",
@@ -39,26 +39,6 @@
                     "loopback" : "true"
                     },
 					{
-                    "voisin" : 14,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 15,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 16,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 17,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
                     "voisin" : 21,
                     "AS" : "222",
                     "loopback" : "false"
@@ -79,12 +59,6 @@
                 },
 				{
                 "name" : "GigabitEthernet2/0",
-                "voisin" : 14,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
                 "voisin" : 21,
                 "RIP" : "true",
                 "OSPF" : "false"
@@ -92,7 +66,7 @@
             },
 		{
             "name" : 12,
-            "PATH" : "../project-files/dynamips/bb5bce07-b53c-4544-a1a4-232c199544b4/configs/",
+            "PATH" : "../project-files/dynamips/f5a64851-6b6d-4f50-ae09-d5d2007548f1/configs/",
             "file" : "i2_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.12",
@@ -123,26 +97,6 @@
                     "loopback" : "true"
                     },
 					{
-                    "voisin" : 14,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 15,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 16,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 17,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
                     "voisin" : 22,
                     "AS" : "222",
                     "loopback" : "false"
@@ -157,7 +111,7 @@
                 },
 				{
                 "name" : "GigabitEthernet1/0",
-                "voisin" : 14,
+                "voisin" : 22,
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
@@ -166,17 +120,11 @@
                 "voisin" : 13,
                 "RIP" : "true",
                 "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
-                "voisin" : 22,
-                "RIP" : "true",
-                "OSPF" : "false"
                 }]
             },
 		{
             "name" : 13,
-            "PATH" : "../project-files/dynamips/28cc91c9-3dda-4357-ab61-385b7021b099/configs/",
+            "PATH" : "../project-files/dynamips/3d0e7a96-4ad7-4f0f-845b-9f1ae3ab1123/configs/",
             "file" : "i3_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.13",
@@ -205,26 +153,6 @@
                     "voisin" : 12,
                     "AS" : "111",
                     "loopback" : "true"
-                    },
-					{
-                    "voisin" : 14,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 15,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 16,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 17,
-                    "AS" : "111",
-                    "loopback" : "true"
                     }]
                 },
             "interface" : [
@@ -242,335 +170,7 @@
                 },
 				{
                 "name" : "GigabitEthernet2/0",
-                "voisin" : 15,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
-                "voisin" : 14,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet4/0",
                 "voisin" : 12,
-                "RIP" : "true",
-                "OSPF" : "false"
-                }]
-            },
-		{
-            "name" : 14,
-            "PATH" : "../project-files/dynamips/3dc7928f-7914-4fc3-9f51-b8bc8e5c7b7f/configs/",
-            "file" : "i4_startup-config.cfg",
-            "AS" : "111",
-            "id" : "1.1.1.14",
-            "RIP" :
-                {
-                    "enable" : "true",
-                    "process" : "mrip"
-                },
-            "OSPF" :
-                {
-                "enable" : "false",
-                "process" : "",
-                "area" : "",
-                "passive" : ""
-                },
-            "BGP" :
-                {
-                "enable" : "true",
-                "neighbors" : [
-                    {
-                    "voisin" : 11,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 12,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 13,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 15,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 16,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 17,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    }]
-                },
-            "interface" : [
-                {
-                "name" : "Loopback0",
-                "voisin" : 0,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet1/0",
-                "voisin" : 12,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet2/0",
-                "voisin" : 16,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
-                "voisin" : 13,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet4/0",
-                "voisin" : 11,
-                "RIP" : "true",
-                "OSPF" : "false"
-                }]
-            },
-		{
-            "name" : 15,
-            "PATH" : "../project-files/dynamips/fdb91b40-459c-4c29-89a5-4594d44e0a95/configs/",
-            "file" : "i5_startup-config.cfg",
-            "AS" : "111",
-            "id" : "1.1.1.15",
-            "RIP" :
-                {
-                    "enable" : "true",
-                    "process" : "mrip"
-                },
-            "OSPF" :
-                {
-                "enable" : "false",
-                "process" : "",
-                "area" : "",
-                "passive" : ""
-                },
-            "BGP" :
-                {
-                "enable" : "true",
-                "neighbors" : [
-                    {
-                    "voisin" : 11,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 12,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 13,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 14,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 16,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 17,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    }]
-                },
-            "interface" : [
-                {
-                "name" : "Loopback0",
-                "voisin" : 0,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet1/0",
-                "voisin" : 17,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet2/0",
-                "voisin" : 13,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
-                "voisin" : 16,
-                "RIP" : "true",
-                "OSPF" : "false"
-                }]
-            },
-		{
-            "name" : 16,
-            "PATH" : "../project-files/dynamips/85e92112-38c2-4cbb-bda5-f8d2bbd40293/configs/",
-            "file" : "i6_startup-config.cfg",
-            "AS" : "111",
-            "id" : "1.1.1.16",
-            "RIP" :
-                {
-                    "enable" : "true",
-                    "process" : "mrip"
-                },
-            "OSPF" :
-                {
-                "enable" : "false",
-                "process" : "",
-                "area" : "",
-                "passive" : ""
-                },
-            "BGP" :
-                {
-                "enable" : "true",
-                "neighbors" : [
-                    {
-                    "voisin" : 11,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 12,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 13,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 14,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 15,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 17,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    }]
-                },
-            "interface" : [
-                {
-                "name" : "Loopback0",
-                "voisin" : 0,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet1/0",
-                "voisin" : 16,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet2/0",
-                "voisin" : 14,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
-                "voisin" : 15,
-                "RIP" : "true",
-                "OSPF" : "false"
-                }]
-            },
-		{
-            "name" : 17,
-            "PATH" : "../project-files/dynamips/920b6d92-f072-4448-96b5-be4b01c6817b/configs/",
-            "file" : "i7_startup-config.cfg",
-            "AS" : "111",
-            "id" : "1.1.1.17",
-            "RIP" :
-                {
-                    "enable" : "true",
-                    "process" : "mrip"
-                },
-            "OSPF" :
-                {
-                "enable" : "false",
-                "process" : "",
-                "area" : "",
-                "passive" : ""
-                },
-            "BGP" :
-                {
-                "enable" : "true",
-                "neighbors" : [
-                    {
-                    "voisin" : 11,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 12,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 13,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 14,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 15,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 16,
-                    "AS" : "111",
-                    "loopback" : "true"
-                    }]
-                },
-            "interface" : [
-                {
-                "name" : "Loopback0",
-                "voisin" : 0,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet1/0",
-                "voisin" : 15,
-                "RIP" : "true",
-                "OSPF" : "false"
-                },
-				{
-                "name" : "GigabitEthernet2/0",
-                "voisin" : 16,
                 "RIP" : "true",
                 "OSPF" : "false"
                 },
@@ -583,8 +183,8 @@
             },
 		{
             "name" : 21,
-            "PATH" : "../project-files/dynamips/9885443b-c300-411f-b824-56f9668bcc44/configs/",
-            "file" : "i12_startup-config.cfg",
+            "PATH" : "../project-files/dynamips/a0ddd118-eee4-4f62-9187-c24e0dfff6a5/configs/",
+            "file" : "i4_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.21",
             "RIP" :
@@ -603,11 +203,6 @@
                 {
                 "enable" : "true",
                 "neighbors" : [
-                    {
-                    "voisin" : 27,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
 					{
                     "voisin" : 22,
                     "AS" : "222",
@@ -615,21 +210,6 @@
                     },
 					{
                     "voisin" : 23,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 24,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 25,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 26,
                     "AS" : "222",
                     "loopback" : "true"
                     },
@@ -654,12 +234,6 @@
                 },
 				{
                 "name" : "GigabitEthernet2/0",
-                "voisin" : 24,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
                 "voisin" : 11,
                 "RIP" : "false",
                 "OSPF" : "true"
@@ -667,8 +241,8 @@
             },
 		{
             "name" : 22,
-            "PATH" : "../project-files/dynamips/59a4c443-a3e3-45b8-ab87-10bd3732b2fd/configs/",
-            "file" : "i8_startup-config.cfg",
+            "PATH" : "../project-files/dynamips/c7076df7-35cc-4041-bde0-6f5396ca8632/configs/",
+            "file" : "i5_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.22",
             "RIP" :
@@ -687,11 +261,6 @@
                 {
                 "enable" : "true",
                 "neighbors" : [
-                    {
-                    "voisin" : 27,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
 					{
                     "voisin" : 21,
                     "AS" : "222",
@@ -699,21 +268,6 @@
                     },
 					{
                     "voisin" : 23,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 24,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 25,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 26,
                     "AS" : "222",
                     "loopback" : "true"
                     },
@@ -732,7 +286,7 @@
                 },
 				{
                 "name" : "GigabitEthernet1/0",
-                "voisin" : 24,
+                "voisin" : 12,
                 "RIP" : "false",
                 "OSPF" : "true"
                 },
@@ -741,18 +295,12 @@
                 "voisin" : 23,
                 "RIP" : "false",
                 "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
-                "voisin" : 12,
-                "RIP" : "false",
-                "OSPF" : "true"
                 }]
             },
 		{
             "name" : 23,
-            "PATH" : "../project-files/dynamips/eac171bb-3a38-493c-9808-91c637a1dd71/configs/",
-            "file" : "i13_startup-config.cfg",
+            "PATH" : "../project-files/dynamips/aeaa94eb-6a37-4b78-8d0d-9d8e133adb4e/configs/",
+            "file" : "i6_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.23",
             "RIP" :
@@ -771,11 +319,6 @@
                 {
                 "enable" : "true",
                 "neighbors" : [
-                    {
-                    "voisin" : 27,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
 					{
                     "voisin" : 21,
                     "AS" : "222",
@@ -783,21 +326,6 @@
                     },
 					{
                     "voisin" : 22,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 24,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 25,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 26,
                     "AS" : "222",
                     "loopback" : "true"
                     }]
@@ -817,335 +345,7 @@
                 },
 				{
                 "name" : "GigabitEthernet2/0",
-                "voisin" : 25,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
-                "voisin" : 24,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet4/0",
                 "voisin" : 22,
-                "RIP" : "false",
-                "OSPF" : "true"
-                }]
-            },
-		{
-            "name" : 24,
-            "PATH" : "../project-files/dynamips/8ed94e4d-92b6-490d-9fc3-f0de34d51b53/configs/",
-            "file" : "i11_startup-config.cfg",
-            "AS" : "222",
-            "id" : "2.2.2.24",
-            "RIP" :
-                {
-                    "enable" : "false",
-                    "process" : ""
-                },
-            "OSPF" :
-                {
-                "enable" : "true",
-                "process" : "13",
-                "area" : "0",
-                "passive" : ""
-                },
-            "BGP" :
-                {
-                "enable" : "true",
-                "neighbors" : [
-                    {
-                    "voisin" : 27,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 21,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 22,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 23,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 25,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 26,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    }]
-                },
-            "interface" : [
-                {
-                "name" : "Loopback0",
-                "voisin" : 0,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet1/0",
-                "voisin" : 22,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet2/0",
-                "voisin" : 26,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
-                "voisin" : 23,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet4/0",
-                "voisin" : 21,
-                "RIP" : "false",
-                "OSPF" : "true"
-                }]
-            },
-		{
-            "name" : 25,
-            "PATH" : "../project-files/dynamips/39f7631a-d0a8-4567-a1c8-bbade4e591d1/configs/",
-            "file" : "i14_startup-config.cfg",
-            "AS" : "222",
-            "id" : "2.2.2.25",
-            "RIP" :
-                {
-                    "enable" : "false",
-                    "process" : ""
-                },
-            "OSPF" :
-                {
-                "enable" : "true",
-                "process" : "13",
-                "area" : "0",
-                "passive" : ""
-                },
-            "BGP" :
-                {
-                "enable" : "true",
-                "neighbors" : [
-                    {
-                    "voisin" : 27,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 21,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 22,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 23,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 24,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 26,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    }]
-                },
-            "interface" : [
-                {
-                "name" : "Loopback0",
-                "voisin" : 0,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet1/0",
-                "voisin" : 23,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet2/0",
-                "voisin" : 27,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
-                "voisin" : 26,
-                "RIP" : "false",
-                "OSPF" : "true"
-                }]
-            },
-		{
-            "name" : 26,
-            "PATH" : "../project-files/dynamips/c4253db9-f662-4279-9f59-484b8199c535/configs/",
-            "file" : "i10_startup-config.cfg",
-            "AS" : "222",
-            "id" : "2.2.2.26",
-            "RIP" :
-                {
-                    "enable" : "false",
-                    "process" : ""
-                },
-            "OSPF" :
-                {
-                "enable" : "true",
-                "process" : "13",
-                "area" : "0",
-                "passive" : ""
-                },
-            "BGP" :
-                {
-                "enable" : "true",
-                "neighbors" : [
-                    {
-                    "voisin" : 27,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 21,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 22,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 23,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 24,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 25,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    }]
-                },
-            "interface" : [
-                {
-                "name" : "Loopback0",
-                "voisin" : 0,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet1/0",
-                "voisin" : 24,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet2/0",
-                "voisin" : 27,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet3/0",
-                "voisin" : 25,
-                "RIP" : "false",
-                "OSPF" : "true"
-                }]
-            },
-		{
-            "name" : 27,
-            "PATH" : "../project-files/dynamips/8d5500da-417b-43ce-82e2-39ee6c9fbb16/configs/",
-            "file" : "i9_startup-config.cfg",
-            "AS" : "222",
-            "id" : "2.2.2.27",
-            "RIP" :
-                {
-                    "enable" : "false",
-                    "process" : ""
-                },
-            "OSPF" :
-                {
-                "enable" : "true",
-                "process" : "13",
-                "area" : "0",
-                "passive" : ""
-                },
-            "BGP" :
-                {
-                "enable" : "true",
-                "neighbors" : [
-                    {
-                    "voisin" : 26,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 21,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 22,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 23,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 24,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    },
-					{
-                    "voisin" : 25,
-                    "AS" : "222",
-                    "loopback" : "true"
-                    }]
-                },
-            "interface" : [
-                {
-                "name" : "Loopback0",
-                "voisin" : 0,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet1/0",
-                "voisin" : 25,
-                "RIP" : "false",
-                "OSPF" : "true"
-                },
-				{
-                "name" : "GigabitEthernet2/0",
-                "voisin" : 26,
                 "RIP" : "false",
                 "OSPF" : "true"
                 },

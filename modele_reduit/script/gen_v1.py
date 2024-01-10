@@ -64,7 +64,7 @@ def activate(data, prefixe):
     res = ""
     res = res + " address-family ipv6\n"
     for i in data["interface"]:
-        res = res + "  network " + addressage_int(i, data, prefixe)[:-3] + "/64\n"   
+        res = res + "  network " + addressage_int(i, data, prefixe)[:-4] + "/64\n"   
     for j in data["BGP"]["neighbors"]:
         res = res + "  neighbor " + addressage_neigh(prefixe, j) + " activate\n"
     
@@ -157,7 +157,7 @@ def tail(routeur):
 
 def addressage_int(interface, routeur, prefixe):
     if interface["voisin"] < 0:
-        addresse = prefixe["intra"] + str(abs(interface["voisin"]))+":1::" + prefixe["mask"]
+        addresse = prefixe["intra"] + str(abs(interface["voisin"]))+":1::1" + prefixe["mask"]
         
     elif interface["voisin"] == 0:
         addresse = prefixe["intra"] + str(int(routeur['name'] / 10)) + ":" + str((routeur["name"]%10) * 11) + "::1" + prefixe["mask"]
