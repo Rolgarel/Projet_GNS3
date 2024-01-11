@@ -49,19 +49,22 @@
                 "name" : "Loopback0",
                 "voisin" : 0,
                 "RIP" : "true",
-                "OSPF" : "false"
+                "OSPF" : "false",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet1/0",
                 "voisin" : 13,
                 "RIP" : "true",
-                "OSPF" : "false"
+                "OSPF" : "false",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet2/0",
                 "voisin" : 21,
                 "RIP" : "true",
-                "OSPF" : "false"
+                "OSPF" : "false",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 }]
             },
 		{
@@ -107,19 +110,22 @@
                 "name" : "Loopback0",
                 "voisin" : 0,
                 "RIP" : "true",
-                "OSPF" : "false"
+                "OSPF" : "false",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet1/0",
                 "voisin" : 22,
                 "RIP" : "true",
-                "OSPF" : "false"
+                "OSPF" : "false",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet2/0",
                 "voisin" : 13,
                 "RIP" : "true",
-                "OSPF" : "false"
+                "OSPF" : "false",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 }]
             },
 		{
@@ -160,25 +166,29 @@
                 "name" : "Loopback0",
                 "voisin" : 0,
                 "RIP" : "true",
-                "OSPF" : "false"
+                "OSPF" : "false",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet1/0",
                 "voisin" : 11,
                 "RIP" : "true",
-                "OSPF" : "false"
+                "OSPF" : "false",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet2/0",
                 "voisin" : 12,
                 "RIP" : "true",
-                "OSPF" : "false"
+                "OSPF" : "false",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet3/0",
                 "voisin" : -1,
                 "RIP" : "true",
-                "OSPF" : "false"
+                "OSPF" : "false",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 }]
             },
 		{
@@ -224,19 +234,22 @@
                 "name" : "Loopback0",
                 "voisin" : 0,
                 "RIP" : "false",
-                "OSPF" : "true"
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet1/0",
                 "voisin" : 23,
                 "RIP" : "false",
-                "OSPF" : "true"
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet2/0",
                 "voisin" : 11,
                 "RIP" : "false",
-                "OSPF" : "true"
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 }]
             },
 		{
@@ -282,19 +295,22 @@
                 "name" : "Loopback0",
                 "voisin" : 0,
                 "RIP" : "false",
-                "OSPF" : "true"
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet1/0",
                 "voisin" : 12,
                 "RIP" : "false",
-                "OSPF" : "true"
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet2/0",
                 "voisin" : 23,
                 "RIP" : "false",
-                "OSPF" : "true"
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 }]
             },
 		{
@@ -335,25 +351,29 @@
                 "name" : "Loopback0",
                 "voisin" : 0,
                 "RIP" : "false",
-                "OSPF" : "true"
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet1/0",
                 "voisin" : 21,
                 "RIP" : "false",
-                "OSPF" : "true"
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 },
 				{
                 "name" : "GigabitEthernet2/0",
                 "voisin" : 22,
                 "RIP" : "false",
-                "OSPF" : "true"
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : 6936, "address" : "FE80::C805:BFF:FE8C:38"}
                 },
 				{
                 "name" : "GigabitEthernet3/0",
                 "voisin" : -2,
                 "RIP" : "false",
-                "OSPF" : "true"
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
                 }]
             }]
 }
