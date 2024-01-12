@@ -91,6 +91,8 @@ def interface(inter, routeur, prefixe):
         s = s + " ipv6 rip mrip enable\n"
     elif inter['OSPF'] == "true":
         s = s + " ipv6 ospf 13 area 0\n"
+        if inter['OSPF_COST']['address'] != "":
+            s = s + " ipv6 ospf neighbor " + inter['OSPF_COST']['address'] + " cost " + str(inter['OSPF_COST']['cost']) + "\n"
     s = s + "! \n"
     return s
 
@@ -180,6 +182,7 @@ def addressage_neigh(prefixe, neighbor):
 def adressage_reseau(prefixe, addresse):
     res = addresse[:-3] + prefixe['mask']
     return res
+
 
 # début
 
