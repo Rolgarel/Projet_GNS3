@@ -1,0 +1,199 @@
+{
+    "Prefixes" : {
+		"intra" : "2001:100:10",
+		"extra" : "2001:200:100:",
+		"mask" : "/64"
+	
+	},
+	"Router" : [
+        {
+            "name" : 11,
+            "PATH" : "../project-files/dynamips/483918a3-7254-4026-932e-f57d71f4ac66/configs/",
+            "file" : "i1_startup-config.cfg",
+            "AS" : "111",
+            "id" : "1.1.1.11",
+            "RIP" :
+                {
+                    "enable" : "false",
+                    "process" : ""
+                },
+            "OSPF" :
+                {
+                "enable" : "true",
+                "process" : "13",
+                "area" : "0",
+                "passive" : "GigabitEthernet2/0"
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "voisin" : 21,
+                    "AS" : "222",
+                    "loopback" : "false"
+                    },
+					{
+                    "voisin" : 31,
+                    "AS" : "333",
+                    "loopback" : "false"
+                    }]
+                },
+            "interface" : [
+                {
+                "name" : "Loopback0",
+                "voisin" : 0,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                },
+				{
+                "name" : "GigabitEthernet1/0",
+                "voisin" : -1,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                },
+				{
+                "name" : "GigabitEthernet2/0",
+                "voisin" : 22,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                },
+				{
+                "name" : "GigabitEthernet3/0",
+                "voisin" : 33,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                }]
+            },
+		{
+            "name" : 22,
+            "PATH" : "../project-files/dynamips/8adea0af-4ce6-4214-9b1a-15ca137ebec1/configs/",
+            "file" : "i2_startup-config.cfg",
+            "AS" : "222",
+            "id" : "2.2.2.22",
+            "RIP" :
+                {
+                    "enable" : "false",
+                    "process" : ""
+                },
+            "OSPF" :
+                {
+                "enable" : "true",
+                "process" : "13",
+                "area" : "0",
+                "passive" : "GigabitEthernet1/0"
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "voisin" : 21,
+                    "AS" : "111",
+                    "loopback" : "false"
+                    },
+					{
+                    "voisin" : 32,
+                    "AS" : "333",
+                    "loopback" : "false"
+                    }]
+                },
+            "interface" : [
+                {
+                "name" : "Loopback0",
+                "voisin" : 0,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                },
+				{
+                "name" : "GigabitEthernet1/0",
+                "voisin" : 11,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                },
+				{
+                "name" : "GigabitEthernet2/0",
+                "voisin" : -2,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                },
+				{
+                "name" : "GigabitEthernet3/0",
+                "voisin" : 33,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                }]
+            },
+		{
+            "name" : 33,
+            "PATH" : "../project-files/dynamips/35fa18ed-fbeb-4511-8e60-5246dd031c15/configs/",
+            "file" : "i3_startup-config.cfg",
+            "AS" : "333",
+            "id" : "3.3.3.33",
+            "RIP" :
+                {
+                    "enable" : "false",
+                    "process" : ""
+                },
+            "OSPF" :
+                {
+                "enable" : "true",
+                "process" : "13",
+                "area" : "0",
+                "passive" : "GigabitEthernet1/0"
+                },
+            "BGP" :
+                {
+                "enable" : "true",
+                "neighbors" : [
+                    {
+                    "voisin" : 31,
+                    "AS" : "111",
+                    "loopback" : "false"
+                    },
+					{
+                    "voisin" : 32,
+                    "AS" : "222",
+                    "loopback" : "false"
+                    }]
+                },
+            "interface" : [
+                {
+                "name" : "Loopback0",
+                "voisin" : 0,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                },
+				{
+                "name" : "GigabitEthernet1/0",
+                "voisin" : 11,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                },
+				{
+                "name" : "GigabitEthernet2/0",
+                "voisin" : 22,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                },
+				{
+                "name" : "GigabitEthernet3/0",
+                "voisin" : -3,
+                "RIP" : "false",
+                "OSPF" : "true",
+				"OSPF_COST" : {"cost" : -1, "address" : ""}
+                }]
+            }]
+}
+      
