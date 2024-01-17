@@ -1,23 +1,25 @@
 import telnetlib
 import gns3fy
+import time
+
 
 HOST = "localhost"
-PROJECT_ID = "a2e5c444-949d-4ae8-99de-55957d4e9dc4"
-server = gns3fy.Gns3Connector("http://" + HOST + ":3080")
-project = gns3fy.Project(name="modele_reduit", connector=server)
-project.get()
-project.open()
+# port du routeur (généralement dans les 5000)
+port = 5000
 
-nodes = server.nodes
-for i in nodes:
-    print(i)
 
-# tn = telnetlib.Telnet(HOST, 5001)
+try:
+    # ouverture de la connexion avec le routeur
+    tn = telnetlib.Telnet(HOST, port)
 
-# tn.write("")
+    # création de la suite de lignes de commandes
+    s = "conf t\r"
+    s = s + "interface Loopback0\r"
+    s = s + "no shutdown\r"
+    s = s + "end\r"
 
-tn.write(b"int Loopback0")
-tn.write(b"shutdown")
+    # transmission de la suite de lignes de commandes
+    tn.write(s.encode())
 
-# l = tn.read_all()
-# print(l)
+except Exception as err:
+    print("Erreur: connexion impossible ou transmission de commande impossible", err)
