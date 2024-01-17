@@ -1,6 +1,7 @@
 import json
 
 
+# génération d'une suite de lignes  contenant un point d'exclamation
 def lot_of_pt_ex(nb):
     res = ""
     for i in range(nb):
@@ -157,48 +158,61 @@ def tail(routeur):
     s = s + end()
     return s
 
+
+# fonction de génération des adresses IP pour la partie interface de la configuration
 def addressage_int(interface, routeur, prefixe):
+    # adresse pour un network
     if interface["voisin"] < 0:
         addresse = prefixe["intra"] + str(abs(interface["voisin"]))+":1::1" + prefixe["mask"]
-        
+
+    # adresse pour une connexion avec un lan
     elif interface["voisin"] == 0:
         addresse = prefixe["intra"] + str(int(routeur['name'] / 10)) + ":" + str((routeur["name"]%10) * 11) + "::1" + prefixe["mask"]
-        
+
+    # adresse pour une connexion avec un autre routeur
     else :
+        # Si les deux routeurs sont dans des AS différents
         if int(routeur["name"] / 10) != int(interface["voisin"]/10): #pas dans meme AS
             addresse = prefixe["extra"] + str(routeur["name"]%10) + "::" + str(int(routeur["name"]/10)) + prefixe["mask"]
-    
-        else : #meme AS
+        # Si les deux routeurs sont dans le même AS
+        else :
             addresse = prefixe["intra"] + str(int(routeur["name"] / 10)) + ":" + str(max(routeur["name"]%10, interface["voisin"]%10)) + str(min(routeur["name"]%10, interface["voisin"]%10)) + "::" + str(routeur["name"]%10) + prefixe["mask"]
     return addresse
 
+
+# fonction de génération des adresses IP pour la partie neighbor (BGP) de la configuartion
 def addressage_neigh(prefixe, neighbor):
+    # Si la connexion avec le voisin se fait par l'adresse de loopback
     if neighbor["loopback"] == "true":
         res = prefixe["intra"] + str(int(neighbor['voisin']/10)) + ":" + str(int(neighbor['voisin']%10)*11) + "::1"
+    # Sinon
     else :
         res = prefixe["extra"] + str(int(neighbor['voisin']%10)) + "::" + str(int(neighbor['voisin']/10))
     return res
 
+
+# génération d'une adresse réseau à partir d'une adresse donnée
 def adressage_reseau(prefixe, addresse):
     res = addresse[:-3] + prefixe['mask']
     return res
 
 
-# début
+if __name__ == "__main__":
+    # début
 
-# ouverture du json
-file = open('routeurs.json', "r")
-data = json.loads(file.read())
+    # ouverture du json
+    file = open('routeurs.json', "r")
+    data = json.loads(file.read())
 
-s = ""
-for i in data['Router']:
-    s = introduction(i) + interfaces(i['interface'], i, data['Prefixes']) + bgp(i, data['Prefixes']) + tail(i)
-    # print(s)
-    # print(i['name'] + '.cdf')
-    with open(i['PATH'] + i['file'], "w") as f:
-        f.write(s)
-        f.close()
+    s = ""
+    for i in data['Router']:
+        s = introduction(i) + interfaces(i['interface'], i, data['Prefixes']) + bgp(i, data['Prefixes']) + tail(i)
+        # print(s)
+        # print(i['name'] + '.cdf')
+        with open(i['PATH'] + i['file'], "w") as f:
+            f.write(s)
+            f.close()
 
-# fermeture du json
-file.close()
+    # fermeture du json
+    file.close()
 
