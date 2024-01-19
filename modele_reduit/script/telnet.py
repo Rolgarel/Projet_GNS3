@@ -5,7 +5,7 @@ import time
 
 HOST = "localhost"
 # port du routeur (généralement dans les 5000)
-port = 5000
+port = 5005
 
 
 try:

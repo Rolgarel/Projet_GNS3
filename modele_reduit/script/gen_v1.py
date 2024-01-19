@@ -46,9 +46,9 @@ def neighbors(data, prefixe):
     res = res + " bgp log-neighbor-changes\n"
     res = res + " no bgp default ipv4-unicast\n"
     for i in data["BGP"]["neighbors"]:
-        res = res + " neighbor " + addressage_neigh(prefixe, i) + " remote-as " + i["AS"] + "\n"
+        res = res + " neighbor " + other_router_bgp_address(prefixe, i, data) + " remote-as " + i["AS"] + "\n"
         if i["loopback"] == "true":
-            res = res + " neighbor " + addressage_neigh(prefixe, i) + " update-source Loopback0\n"
+            res = res + " neighbor " + other_router_bgp_address(prefixe, i, data) + " update-source Loopback0\n"
     return res
 
 
@@ -65,11 +65,10 @@ def activate(data, prefixe):
     res = ""
     res = res + " address-family ipv6\n"
     for i in data["interface"]:
-        res = res + "  network " + addressage_int(i, data, prefixe)[:-4] + "/64\n"   
+        res = res + "  network " + network_address(i, data, prefixe) + "\n"
     for j in data["BGP"]["neighbors"]:
-        res = res + "  neighbor " + addressage_neigh(prefixe, j) + " activate\n"
-    
-    
+        res = res + "  neighbor " + other_router_bgp_address(prefixe, j, data) + " activate\n"
+
     res = res + " exit-address-family\n"
     res = res + "! \n"
     return res
@@ -87,7 +86,7 @@ def interface(inter, routeur, prefixe):
     if inter["name"] != "Loopback0":
         s = s + " negotiation auto\n"
     s = s + " ipv6 enable\n"
-    s = s + " ipv6 address " + addressage_int(inter, routeur, prefixe) + "\n"
+    s = s + " ipv6 address " + interface_address(inter, routeur, prefixe) + "\n"
     if inter['RIP'] == "true":
         s = s + " ipv6 rip mrip enable\n"
     elif inter['OSPF'] == "true":
@@ -159,41 +158,86 @@ def tail(routeur):
     return s
 
 
-# fonction de génération des adresses IP pour la partie interface de la configuration
-def addressage_int(interface, routeur, prefixe):
-    # adresse pour un network
-    if interface["voisin"] < 0:
-        addresse = prefixe["intra"] + str(abs(interface["voisin"]))+":1::1" + prefixe["mask"]
-
-    # adresse pour une connexion avec un lan
-    elif interface["voisin"] == 0:
-        addresse = prefixe["intra"] + str(int(routeur['name'] / 10)) + ":" + str((routeur["name"]%10) * 11) + "::1" + prefixe["mask"]
-
-    # adresse pour une connexion avec un autre routeur
-    else :
-        # Si les deux routeurs sont dans des AS différents
-        if int(routeur["name"] / 10) != int(interface["voisin"]/10): #pas dans meme AS
-            addresse = prefixe["extra"] + str(routeur["name"]%10) + "::" + str(int(routeur["name"]/10)) + prefixe["mask"]
-        # Si les deux routeurs sont dans le même AS
-        else :
-            addresse = prefixe["intra"] + str(int(routeur["name"] / 10)) + ":" + str(max(routeur["name"]%10, interface["voisin"]%10)) + str(min(routeur["name"]%10, interface["voisin"]%10)) + "::" + str(routeur["name"]%10) + prefixe["mask"]
-    return addresse
-
-
-# fonction de génération des adresses IP pour la partie neighbor (BGP) de la configuartion
-def addressage_neigh(prefixe, neighbor):
-    # Si la connexion avec le voisin se fait par l'adresse de loopback
-    if neighbor["loopback"] == "true":
-        res = prefixe["intra"] + str(int(neighbor['voisin']/10)) + ":" + str(int(neighbor['voisin']%10)*11) + "::1"
-    # Sinon
-    else :
-        res = prefixe["extra"] + str(int(neighbor['voisin']%10)) + "::" + str(int(neighbor['voisin']/10))
+def loopback_address(routeur, prefixe, net):
+    res = prefixe['intra'] + str(int(routeur['name'] / 10)) + ":"
+    res = res + str(11*(routeur['name'] % 10))
+    if not net:
+        res = res + "::1" + prefixe['mask']
+    else:
+        res = res + "::" + prefixe['mask']
     return res
 
 
-# génération d'une adresse réseau à partir d'une adresse donnée
-def adressage_reseau(prefixe, addresse):
-    res = addresse[:-3] + prefixe['mask']
+# fonction générant les adresses des réseaux pour la partie network advertisement de la configuration
+def network_address(inter, routeur, prefixe):
+    # Si le sous-réseau correspond à un LAN
+    if inter['voisin'] < 0:
+        res = prefixe['intra'] + str(int(routeur['name'] / 10)) + ":"
+        res = res + str(abs(inter['voisin']))
+        res = res + "::" + prefixe['mask']
+    # Si le sous-réseau correspond à un loopback
+    elif inter['voisin'] == 0:
+        res = loopback_address(routeur, prefixe,True)
+    # Si le sous-réseau correspond à un lien avec un routeur
+    else:
+        # Si dans le même AS
+        if int(routeur['name'] / 10) == int(inter['voisin'] / 10):
+            res = prefixe['intra'] + str(int(routeur['name'] / 10)) + ":"
+            res = res + str(max(routeur['name'] % 10, inter['voisin'] % 10))
+            res = res + str(min(routeur['name'] % 10, inter['voisin'] % 10))
+            res = res + "::" + prefixe['mask']
+        # Sinon
+        else:
+            res = prefixe['extra']
+            res = res + str(max(int(routeur['name'] / 10), int(inter['voisin'] / 10)))
+            res = res + str(min(int(routeur['name'] / 10), int(inter['voisin'] / 10)))
+            res = res + str(max(routeur['name'] % 10, inter['voisin'] % 10))
+            res = res + "::" + prefixe['mask']
+    return res
+
+
+# fonction générant les adresses des interfaces pour la partie interface de la configuration
+def interface_address(inter, routeur, prefixe):
+    # Si le sous-réseau correspond à un LAN
+    if inter['voisin'] < 0:
+        res = prefixe['intra'] + str(int(routeur['name'] / 10)) + ":"
+        res = res + str(abs(inter['voisin']))
+        res = res + "::" + str(1) + prefixe['mask']
+    # Si le sous-réseau correspond à un loopback
+    elif inter['voisin'] == 0:
+        res = loopback_address(routeur, prefixe,False)
+    # Si le sous-réseau correspond à un lien avec un routeur
+    else:
+        # Si dans le même AS
+        if int(routeur['name']/10) == int(inter['voisin']/10):
+            res = prefixe['intra'] + str(int(routeur['name']/10)) + ":"
+            res = res + str(max(routeur['name'] % 10, inter['voisin'] % 10))
+            res = res + str(min(routeur['name'] % 10, inter['voisin'] % 10))
+            res = res + "::" + str(routeur['name'] % 10) + prefixe['mask']
+        # Sinon
+        else:
+            res = prefixe['extra']
+            res = res + str(max(int(routeur['name']/10), int(inter['voisin']/10)))
+            res = res + str(min(int(routeur['name']/10), int(inter['voisin']/10)))
+            res = res + str(max(routeur['name'] % 10, inter['voisin'] % 10))
+            res = res + "::" + str(int(routeur['name']/10)) + prefixe['mask']
+    return res
+
+
+# génération des adresses des voisins BGP
+def other_router_bgp_address(prefixe, neighbor, self):
+    # Si dans le même AS (adresse de loopback)
+    if self['AS'] == neighbor['AS']:
+        res = prefixe['intra'] + str(int(self['name']/10)) + ":"
+        res = res + str(11*(neighbor['voisin'] % 10))
+        res = res + "::1"
+    # Sinon
+    else:
+        res = prefixe['extra']
+        res = res + str(max(int(self['name'] / 10), int(neighbor['voisin'] / 10)))
+        res = res + str(min(int(self['name'] / 10), int(neighbor['voisin'] / 10)))
+        res = res + str(max(self['name'] % 10, neighbor['voisin'] % 10))
+        res = res + "::" + str(int(neighbor['voisin'] / 10))
     return res
 
 
