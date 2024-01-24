@@ -164,10 +164,10 @@ def filtre(routeur):
     peer = 0
     provider = 0
     if routeur["border"] == "true":  # si c'est un routeur de bordure, il définit les communities et filtres
-        res = res + "route-map COMM permit 10\n"
+        res = res + "route-map COMM deny 10\n"
         res = res + " match community 22\n"
         res = res + "!\n"
-        res = res + "route-map COMM deny 20\n!\n"
+        res = res + "route-map COMM permit 20\n!\n"
         for i in routeur["BGP"]["neighbors"]:
             if i["who"] != "self" and i["who"] == "client":
                 client = client + 1
@@ -203,7 +203,8 @@ def tail(routeur):
             elif i["who"] != "self" and i["who"] == "provider":
                 provider = provider + 1
         if client > 0:
-            s = s + "ip community-list 22 permit " + str(routeur["AS"]) + ":600\n!\n"
+            pass
+            # s = s + "ip community-list 22 permit " + str(routeur["AS"]) + ":600\n!\n"
         elif peer > 0:
             s = s + "ip community-list 22 permit " + str(routeur["AS"]) + ":400\n!\n"
         elif provider > 0:
