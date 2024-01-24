@@ -60,7 +60,6 @@ def entracte():
     res = res + " !\n"
     return res
 
-
 def activate(data, prefixe):
     res = ""
     res = res + " address-family ipv6\n"
@@ -68,11 +67,17 @@ def activate(data, prefixe):
         res = res + "  network " + network_address(i, data, prefixe) + "\n"
     for j in data["BGP"]["neighbors"]:
         res = res + "  neighbor " + other_router_bgp_address(prefixe, j, data) + " activate\n"
+        res = res + "  neighbor " + other_router_bgp_address(prefixe, j, data) + " send-community\n"
+        if data["border"] == "true": #si c'est un routeur de bordure, il applique les communities et filtres
+            if j["who"] != "self" and j["who"] == "client":
+                res = res + "  neighbor " + other_router_bgp_address(prefixe, j, data) + " route-map CLIENT in\n"
+                res = res + "  neighbor " + other_router_bgp_address(prefixe, j, data) + " route-map COMM out\n"
+            elif j["who"] != "self" and j["who"] == "peer":
+                res = res + "  neighbor " + other_router_bgp_address(prefixe, j, data) + " route-map PEER in\n"
 
     res = res + " exit-address-family\n"
     res = res + "! \n"
     return res
-
 
 def bgp(data, prefixe):
     res = neighbors(data, prefixe) + entracte() + activate(data, prefixe)
@@ -147,16 +152,41 @@ def proto(routeur):
         s = s + "! \n"
     return s
 
+def filtre(routeur):
+    res = ""
+    client = 0
+    peer = 0
+    if routeur["border"] == "true": #si c'est un routeur de bordure, il définit les communities et filtres
+        res = res + "route-map COMM permit 10\n"
+        res = res + " match community 22\n"
+        res = res + "!\n"
+        res = res + "route-map COMM deny 20\n!\n"
+        for i in routeur["BGP"]["neighbors"]:
+            if i["who"] != "self" and i["who"] == "client":
+                client = client + 1
+            elif i["who"] != "self" and i["who"] == "peer":
+                peer = peer + 1
+        if client > 0:
+            res = res + "route-map CLIENT permit 10\n"
+            res = res + " set community " + routeur["AS"] + ":600 additive\n"
+        elif peer > 0:
+            res = res + "route-map PEER permit 10\n"
+        
+    return res
 
 def tail(routeur):
-    s = "ip forward-protocol nd\n!\n!\n"
+    s = "ip forward-protocol nd\n!\n"
+    s = s + "ip bgp-community new-format\n"
+    if routeur["border"] == "true":
+        s = s + "ip community-list 22 permit " + str(routeur["AS"]) + ":600\n!\n" 
     s = s + "no ip http server\n"
     s = s + "no ip http secure-server\n!\n"
     s = s + proto(routeur)
+    s = s + "!\n"
+    s = s + filtre(routeur)
     s = s + "!\n!\n!\n"
     s = s + end()
     return s
-
 
 def loopback_address(routeur, prefixe, net):
     res = prefixe['intra'] + str(int(routeur['name'] / 10)) + ":"

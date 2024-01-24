@@ -12,6 +12,7 @@
             "file" : "i1_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.11",
+			"border" : "true",
             "RIP" :
                 {
                     "enable" : "true",
@@ -31,17 +32,20 @@
                     {
                     "voisin" : 12,
                     "AS" : "111",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     },
 					{
                     "voisin" : 13,
                     "AS" : "111",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     },
 					{
                     "voisin" : 21,
                     "AS" : "222",
-                    "loopback" : "false"
+                    "loopback" : "false",
+					"who" : "self"
                     } ]
                 },
             "interface" : [
@@ -73,6 +77,7 @@
             "file" : "i2_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.12",
+			"border" : "true",
             "RIP" :
                 {
                     "enable" : "true",
@@ -92,17 +97,20 @@
                     {
                     "voisin" : 11,
                     "AS" : "111",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     },
 					{
                     "voisin" : 13,
                     "AS" : "111",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     },
 					{
                     "voisin" : 22,
                     "AS" : "222",
-                    "loopback" : "false"
+                    "loopback" : "false",
+					"who" : "self"
                     }]
                 },
             "interface" : [
@@ -134,6 +142,7 @@
             "file" : "i3_startup-config.cfg",
             "AS" : "111",
             "id" : "1.1.1.13",
+			"border" : "false",
             "RIP" :
                 {
                     "enable" : "true",
@@ -153,12 +162,14 @@
                     {
                     "voisin" : 11,
                     "AS" : "111",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     },
 					{
                     "voisin" : 12,
                     "AS" : "111",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     }]
                 },
             "interface" : [
@@ -197,6 +208,7 @@
             "file" : "i4_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.21",
+			"border" : "true",
             "RIP" :
                 {
                     "enable" : "false",
@@ -216,17 +228,20 @@
 					{
                     "voisin" : 22,
                     "AS" : "222",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     },
 					{
                     "voisin" : 23,
                     "AS" : "222",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     },
 					{
                     "voisin" : 11,
                     "AS" : "111",
-                    "loopback" : "false"
+                    "loopback" : "false",
+					"who" : "client"
                     }]
                 },
             "interface" : [
@@ -258,6 +273,7 @@
             "file" : "i5_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.22",
+			"border" : "true",
             "RIP" :
                 {
                     "enable" : "false",
@@ -277,17 +293,20 @@
 					{
                     "voisin" : 21,
                     "AS" : "222",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     },
 					{
                     "voisin" : 23,
                     "AS" : "222",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     },
 					{
                     "voisin" : 12,
                     "AS" : "111",
-                    "loopback" : "false"
+                    "loopback" : "false",
+					"who" : "client"
                     }]
                 },
             "interface" : [
@@ -319,6 +338,7 @@
             "file" : "i6_startup-config.cfg",
             "AS" : "222",
             "id" : "2.2.2.23",
+			"border" : "false",
             "RIP" :
                 {
                     "enable" : "false",
@@ -338,12 +358,14 @@
 					{
                     "voisin" : 21,
                     "AS" : "222",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     },
 					{
                     "voisin" : 22,
                     "AS" : "222",
-                    "loopback" : "true"
+                    "loopback" : "true",
+					"who" : "self"
                     }]
                 },
             "interface" : [
