@@ -207,7 +207,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "GigabitEthernet3/0"
+                "passive" : "GigabitEthernet2/0"
                 },
             "BGP" :
                 {
@@ -268,7 +268,7 @@
                 "enable" : "true",
                 "process" : "13",
                 "area" : "0",
-                "passive" : "GigabitEthernet3/0"
+                "passive" : "GigabitEthernet1/0"
                 },
             "BGP" :
                 {
