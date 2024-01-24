@@ -60,6 +60,7 @@ def entracte():
     res = res + " !\n"
     return res
 
+
 def activate(data, prefixe):
     res = ""
     res = res + " address-family ipv6\n"
@@ -68,7 +69,7 @@ def activate(data, prefixe):
     for j in data["BGP"]["neighbors"]:
         res = res + "  neighbor " + other_router_bgp_address(prefixe, j, data) + " activate\n"
         res = res + "  neighbor " + other_router_bgp_address(prefixe, j, data) + " send-community\n"
-        if data["border"] == "true": #si c'est un routeur de bordure, il applique les communities et filtres
+        if data["border"] == "true":  # si c'est un routeur de bordure, il applique les communities et filtres
             if j["who"] != "self" and j["who"] == "client":
                 res = res + "  neighbor " + other_router_bgp_address(prefixe, j, data) + " route-map CLIENT in\n"
                 res = res + "  neighbor " + other_router_bgp_address(prefixe, j, data) + " route-map COMM out\n"
@@ -78,6 +79,7 @@ def activate(data, prefixe):
     res = res + " exit-address-family\n"
     res = res + "! \n"
     return res
+
 
 def bgp(data, prefixe):
     res = neighbors(data, prefixe) + entracte() + activate(data, prefixe)
@@ -152,11 +154,12 @@ def proto(routeur):
         s = s + "! \n"
     return s
 
+
 def filtre(routeur):
     res = ""
     client = 0
     peer = 0
-    if routeur["border"] == "true": #si c'est un routeur de bordure, il définit les communities et filtres
+    if routeur["border"] == "true":  # si c'est un routeur de bordure, il définit les communities et filtres
         res = res + "route-map COMM permit 10\n"
         res = res + " match community 22\n"
         res = res + "!\n"
@@ -174,6 +177,7 @@ def filtre(routeur):
         
     return res
 
+
 def tail(routeur):
     s = "ip forward-protocol nd\n!\n"
     s = s + "ip bgp-community new-format\n"
@@ -187,6 +191,7 @@ def tail(routeur):
     s = s + "!\n!\n!\n"
     s = s + end()
     return s
+
 
 def loopback_address(routeur, prefixe, net):
     res = prefixe['intra'] + str(int(routeur['name'] / 10)) + ":"
@@ -207,7 +212,7 @@ def network_address(inter, routeur, prefixe):
         res = res + "::" + prefixe['mask']
     # Si le sous-réseau correspond à un loopback
     elif inter['voisin'] == 0:
-        res = loopback_address(routeur, prefixe,True)
+        res = loopback_address(routeur, prefixe, True)
     # Si le sous-réseau correspond à un lien avec un routeur
     else:
         # Si dans le même AS
@@ -235,7 +240,7 @@ def interface_address(inter, routeur, prefixe):
         res = res + "::" + str(1) + prefixe['mask']
     # Si le sous-réseau correspond à un loopback
     elif inter['voisin'] == 0:
-        res = loopback_address(routeur, prefixe,False)
+        res = loopback_address(routeur, prefixe, False)
     # Si le sous-réseau correspond à un lien avec un routeur
     else:
         # Si dans le même AS
@@ -289,4 +294,3 @@ if __name__ == "__main__":
 
     # fermeture du json
     file.close()
-
