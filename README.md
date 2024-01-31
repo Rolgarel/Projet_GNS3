@@ -16,10 +16,11 @@ Le code de configuration et le fichier Json supportent les fonctionnalités suiv
   * Mise en place d'eBGP et iBGP
   * OSPF Metric Optimisation
   * Drag and Drop bot
-  * Mise en place des BGP Policies (tags des routes, définition des préférences, filtrage des routes)
+  * Mise en place des BGP Policies (tags des routes, filtrage des routes)
 
 Code Telnet :
 Code minimaliste permettant d'envoyer des commandes à un routeur.
 
 BGP policies : nous avons fait en sorte que les routes transmisent par les paires et les fournisseurs ne soient pas transmisent qu'à nous et à nos clients.
 Une possibilité d'amélioration serait de bloquer la transmission de toutes les routes qui ne proviennent pas de nos clients et de définir nos LAN comme des clients.
+Une autre possibilité d'amélioration serait de définir les préférences entre les AS.

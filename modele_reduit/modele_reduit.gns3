@@ -21,18 +21,18 @@
                 "drawing_id": "18749032-a784-4140-b30b-ca160f6acd49",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"467.0\" height=\"284.0\"><ellipse cx=\"233\" rx=\"234\" cy=\"142\" ry=\"142\" fill=\"#ffffff\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#000000\" /></svg>",
+                "svg": "<svg width=\"467.0\" height=\"491.0\"><ellipse cx=\"233\" rx=\"234\" cy=\"245\" ry=\"246\" fill=\"#ffffff\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#000000\" /></svg>",
                 "x": 58,
-                "y": -135,
+                "y": -342,
                 "z": 0
             },
             {
                 "drawing_id": "cb1804e3-d967-4496-8dd5-f6b5ed5ac724",
                 "locked": false,
                 "rotation": 0,
-                "svg": "<svg width=\"449.0\" height=\"312.0\"><ellipse cx=\"224\" rx=\"225\" cy=\"156\" ry=\"156\" fill=\"#ffffff\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#000000\" /></svg>",
+                "svg": "<svg width=\"449.0\" height=\"510.0\"><ellipse cx=\"224\" rx=\"225\" cy=\"255\" ry=\"255\" fill=\"#ffffff\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#000000\" /></svg>",
                 "x": -411,
-                "y": -161,
+                "y": -359,
                 "z": 0
             },
             {
@@ -174,8 +174,8 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "e2",
-                            "x": 36,
-                            "y": -23
+                            "x": 42,
+                            "y": -26
                         },
                         "node_id": "ca2e4b98-38d2-4bcc-9664-5248c66c3a58",
                         "port_number": 2
@@ -861,8 +861,8 @@
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                     "text": "Switch1",
-                    "x": -3,
-                    "y": -25
+                    "x": 82,
+                    "y": 2
                 },
                 "locked": false,
                 "name": "Switch1",
@@ -941,8 +941,8 @@
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                     "text": "Switch2",
-                    "x": -4,
-                    "y": 32
+                    "x": -64,
+                    "y": 1
                 },
                 "locked": false,
                 "name": "Switch2",
